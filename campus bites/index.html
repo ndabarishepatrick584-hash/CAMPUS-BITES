@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Campus Bites - Order & Pay First</title>
+<link rel="stylesheet" href="style sheet.css">
+</head>
+<body>
+<header>
+    <h1> Campus Bites Hub</h1>
+    <p>Smocha, Eggs, Chapati, Ugali, Soda → Delivered to Thika Tech Gate/MKU/Runda/Gretsa</p>
+    <div class="badge">Order 6AM-6PM | Delivery 6AM-8PM Daily | PAY FIRST</div>
+</header>
+
+<div class="container">
+    <h2>Menu</h2>
+    <div class="menu">
+        <div class="item">
+            <h3>Smocha + Soda</h3><p>2 Smocha + 500ml Soda</p>
+            <b class="price">KES 150</b>
+            <button onclick="addToCart('Smocha + Soda', 150)">Add +</button>
+        </div>
+        <div class="item">
+            <h4>rice+beans</h4><p>a plate</p>
+            <b class="price">KES150</b>
+            <button onclick="addToCart('rice+beans',150)">Add +</button>
+        </div>
+        </div>
+        <div class="item">
+            <h3>2 Eggs + 2 Chapati</h3><p>Fried eggs + Soft chapatis + Kachumbari</p>
+            <b class="price">KES 150</b>
+            <button onclick="addToCart('2 Eggs + 2 Chapati', 150)">Add +</button>
+        </div>
+        <div class="item">
+            <h3>Ugali + Sukuma + Meat</h3><p>1 Ugali, Sukuma, 1 Piece Meat</p>
+            <b class="price">KES 200</b>
+            <button onclick="addToCart('Ugali + Sukuma + Meat', 200)">Add +</button>
+        </div>
+        <div class="item">
+            <h3>Chips Masala + Egg</h3><p>Full plate + Fried Egg</p>
+            <b class="price">KES 150</b>
+            <button onclick="addToCart('Chips Masala + Egg', 150)">Add +</button>
+        </div>
+        <div class="item">
+            <h3>Tea + 2 Mandazi</h3><p>Morning/Evening combo</p>
+            <b class="price">KES 70</b>
+            <button onclick="addToCart('Tea + 2 Mandazi', 70)">Add +</button>
+        </div>
+        <div class="item">
+            <h3>Soda 500ml</h3><p>Coke, Fanta, Sprite, Stoney</p>
+            <b class="price">KES 100</b>
+            <button onclick="addToCart('Soda 500ml', 50)">Add +</button>
+        </div>
+    </div>
+
+    <div class="checkout">
+        <h3>🛒 Your Order</h3>
+        <ul id="cartItems"><li>Cart is empty</li></ul>
+        <p><b>Total: KES <span id="total">0</span></b></p>
+
+        <div class="payment">
+            <h4>Step 1: Pay to M-PESA TILL: <span>123456</span></h4>
+            <p>Account Name: <b>CampusBites</b></p>
+            <p>Amount: <b>KES <span id="payAmount">0</span></b></p>
+        </div>
+
+        <input id="name" placeholder="Full Name" required>
+        <input id="phone" placeholder="Your Phone 0712..." required>
+        <input id="mpesaCode" placeholder="M-PESA Confirmation Code: SDF1A2B3C" required>
+        <select id="campus" required>
+            <option value="">Select Campus</option><option>MKU</option><option>Thika Tech</option><option>Gretsa</option><option>Runda</option>
+        </select>
+        <input id="location" placeholder="Hostel + Room No. or Gate" required>
+        
+        <button onclick="placeOrder()">Submit Order</button>
+        <p id="status"></p>
+    </div>
+</div>
+<script src="campus bites.js"></script>
+</body>
+</html>
